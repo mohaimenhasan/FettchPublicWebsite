@@ -4,10 +4,8 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import Typical from 'react-typical';
 import Typography from "@material-ui/core/Typography";
 import Particles from 'react-particles-js';
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
+import FetchLogo from '../Static/Fettch Logo.png';
+
 const particlesParam = {
     "particles": {
         "number": {
@@ -34,19 +32,9 @@ const theme = createMuiTheme({
 });
 
 const useStyles = makeStyles({
-    cardStyle: {
-        width: "30%",
-        display: "inline-block",
-        height: '35vw',
-        marginLeft: '10%',
-        marginTop: '2%',
-        textAlign: "center",
-        backgroundColor: "rgba(255, 255, 255, 0.5)",
-        borderStyle: 'solid',
-        borderWidth: 'thick'
-    },
-    cardTitle: {
-        marginTop: '20%'
+    imgStyle:{
+        marginTop: "-50vw",
+        height: "40vw"
     }
 });
 
@@ -66,13 +54,14 @@ class Dash extends Component {
     }
 
     render(){
-        //const classes = this.props.classes;
+        const classes = this.props.classes;
         return(
             <div>
-                <Particles params={particlesParam}/>
                 <ThemeProvider theme={theme}>
+                    <Particles params={particlesParam}/>
+                    <img className={classes.imgStyle} alt={"Fetch Icon"} src={FetchLogo}/>
                     <Typography variant="h3">
-                        Coming soon .. <b>F E TT C H</b>
+                        Coming soon .. <b style={{color: "#002aff"}}>F E TT C H</b>
                     </Typography>
                     <Typical
                         steps={['Shopping whenever you want', 1000, 'Wherever you are', 1000]}
