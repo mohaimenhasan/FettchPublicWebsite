@@ -5,7 +5,7 @@
 ## Technical Stack
 - MERN Framework
 - React: Project Bootstrapped with react for now
-- Deployment: Deployed on heroku <Insert link here>
+- Deployment: Deployed on heroku at https://fettch.herokuapp.com/ 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
